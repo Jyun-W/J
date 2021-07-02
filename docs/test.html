@@ -25,15 +25,14 @@
       
       function getRequest(){
           a1 = JSON.parse(request.responseText);
-          document.getElementById("demo").innerHTML = request.responseText;
+          document.getElementById("demo").innerHTML = a1[44].營業地址;
       }
 
       function change_text(){
         console.log("這邊是console log產生的");
         
         request.open('GET', endpoint,true);
-    
-request.send(null); 
+        request.send(null); 
         request.addEventListener('load',getRequest);
         console.log('request.responseText=' + request.responseText);
       }  
